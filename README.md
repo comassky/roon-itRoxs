@@ -1,7 +1,7 @@
 # roon-itRoxs
-https://github.com/bsc101/roon-extension-itroxs docker image
+https://github.com/bsc101/roon-extension-itroxs : docker image
 
-docker run -d --name itRoxs comassky/itroxs:latest
+    docker run -d -p 8090:8090 --name itRoxs comassky/itroxs:latest
 
 
 
