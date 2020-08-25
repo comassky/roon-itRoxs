@@ -6,9 +6,11 @@ WORKDIR /roon-extension-itroxs
 RUN npm install
 
 FROM node:alpine
+RUN addgroup -S itRox && adduser -S itRox -G itRox
 RUN mkdir -p /app
 COPY --from=build /roon-extension-itroxs /app
 WORKDIR /app
 EXPOSE 8090
+USER itRox
 ENTRYPOINT ["node", "."]
 
