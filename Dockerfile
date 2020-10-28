@@ -1,6 +1,5 @@
-# syntax=docker/dockerfile:experimental
-FROM node:alpine AS build
-RUN apk add git
+FROM node AS build
+RUN apt update && apt install git -y
 RUN git clone https://github.com/bsc101/roon-extension-itroxs.git
 WORKDIR /roon-extension-itroxs
 RUN npm install
